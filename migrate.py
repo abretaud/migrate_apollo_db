@@ -169,7 +169,7 @@ class Migrator():
                         if row[row_id] is None:
                             col_values[col] = None
                         elif row[row_id] not in col_mapping[col]:
-                            log.error("Could not find a mapped if for column %s and value %s..." % (col, row[row_id]))
+                            log.error("Could not find a mapped id for column %s and value %s..." % (col, row[row_id]))
                             if col in allowed_missing:
                                 log.error("    ...removing wrong value")
                                 col_values[col] = None
